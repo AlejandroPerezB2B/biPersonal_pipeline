@@ -1,2 +1,2 @@
 # biPersonal_pipeline
-Set of Matlab based functions for the processing of dual-EEG data (hyperscanning) 
+These functions put together EEGLAB functions arranged for the processing of dual-EEG data (hyperscanning).
