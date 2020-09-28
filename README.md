@@ -2,7 +2,7 @@
 
 biPersonal_pipeline consists in a set of Matlab functions for the processing of dual-EEG data (hyperscanning).
 Each of the functions performs a step in the processing of EEG hyperscanning by using EEGLAB functions arranged in neccesary sequential order.
-These functions were tailor-maded for the experiment reported at:
+These functions were tailor-maded to work on data from the experiment reported at:
 Pérez et al. (2019) Differential brain-to-brain entrainment while speaking and listening in native and foreign languages. Cortex, 111, 303-315.
 doi: 10.1016/j.cortex.2018.11.026;
 but it could be easily adapted to other EEG formats and designs.
@@ -28,8 +28,8 @@ biPer_preproc_v2.m
   14.- Dipole fitting
   
 biPer_cleaning_v2.m
-   To be used after function biPer_preproc(). Assumes the existence of two EEG recordings (xxx_A.set and xxx_B.set) inside the folder xxx.
-   These dataset should be decomposed by ICA and with fitted dipoles.
+   To be used after function biPer_preproc(). Assumes the existence inside folder (xxx) of two EEG recordings (xxx_A.set and xxx_B.set) .
+   These datasets should be decomposed by ICA and with fitted dipoles.
    The following steps are performed over the individual data (same order)
    1.- estimate symetrically constrained bilateral dipoles
    2.- detection and rejection of ICs containing ocular movements and other non-neural activity
