@@ -1,27 +1,12 @@
 function biPer_preproc_v2(filename, montage_name)
-% biPer_prepoc() % Performs the preprocessing of dual EEG recordings using
-%                  EEGLAB functions. Pre-process data is saved into a newly 
-%                  created folder named as the EEG file. It have been 
-%                  tested on EEGLAB versions v2019.1 and v2020.0
-
-%   The following steps are performed over the hyperscanning data (same order)
-%   1.- Import
-%   2.- Downsampling
-%   3.- High-pass filtering
-%   4.- Line noise removal
-%   5.- Selecting data recorded during the experiment (i.e. removing EEG recorded pre and post experiment)
-%   6.- Splits the data into the two individual recordings
-%%%%%%%%%% Then, for each recording %%%%%%%%%%%%%%
-%   7.- Find noisy channels
-%   8.- Removing bad channles
-%   9.- Interpolation
-%  10.- Re-referencing to the average
-%  11.- Referencing with REST
-%  12.- ASR cleaning
-%  13.- ICA decomposition (AMICA)
-%  14.- Dipole fitting
+% biPer_prepoc() % Performs the pre-processing of dual EEG recordings using
+%                  EEGLAB functions. Pre-processed data will be saved at several steps 
+%                  to a folder named as the raw EEG file.
+% 
+% This function is part of BiPersonal_pipeline set of functions and it have been tested 
+% using EEGLAB versions v2019.1 and v2020.0
 %
-% The following plugins are used:
+% The following EEGLAB plugins are used:
 %   1.- Fileio20200820
 %   2.- REST_reference_v1.1_20190818
 %   3.- AMICA(1.5.1)
@@ -43,7 +28,6 @@ function biPer_preproc_v2(filename, montage_name)
 % Author: Alejandro Perez
 % version 1: University of Toronto, UTSC, June 7th 2018.
 % version 2: MRC-CBU, University of Cambridge, March 21, 2020.
-% This function is part of BiPersonal_pipeline set of functions
 
 % adding functions from biPersonal_pipeline to the path
 addpath(genpath('U:\Alejandro\Matlab_functions\biPersonal_pipeline'));
