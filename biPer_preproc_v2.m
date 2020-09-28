@@ -1,19 +1,6 @@
 function biPer_preproc_v2(filename, montage_name)
 % biPer_prepoc() % Performs the pre-processing of dual EEG recordings using
-%                  EEGLAB functions. Pre-processed data will be saved at several steps 
-%                  to a folder named as the raw EEG file.
-% 
-% This function is part of BiPersonal_pipeline set of functions and it have been tested 
-% using EEGLAB versions v2019.1 and v2020.0
-%
-% The following EEGLAB plugins are used:
-%   1.- Fileio20200820
-%   2.- REST_reference_v1.1_20190818
-%   3.- AMICA(1.5.1)
-%   4.- PrepPipeline (v0.55.4)
-%   5.- clean_rawdata (v2.2)
-%   6.- Fieldtrip-lite20200820
-
+%                  EEGLAB functions.
 %%INPUT
 % filename        [string] File name (including extension) of the dual EEG
 %                 recording. e.g. 'eegxxx.vhdr'
@@ -24,6 +11,22 @@ function biPer_preproc_v2(filename, montage_name)
 %                 channels locations file. The file has to be in a
 %                 folder included in the Matlab's path.
 %                 e.g. 'montage_biPer_27.ced'.
+%%OUTPUT
+%                 A folder named as the raw EEG file (eegxx) containing several steps of
+%                 pre-processed EEG data in EEGLAB format (.set). Last step is named
+%                 eegxxx_A_ICA_dipfit.set and eegxxx_B_ICA_dipfit.set
+% 
+% The following EEGLAB plugins are used:
+%   1.- Fileio20200820
+%   2.- REST_reference_v1.1_20190818
+%   3.- AMICA(1.5.1)
+%   4.- PrepPipeline (v0.55.4)
+%   5.- clean_rawdata (v2.2)
+%   6.- Fieldtrip-lite20200820
+%   Also calls the function hyper4leadfield()
+%
+% This function is part of BiPersonal_pipeline set of functions and it have been tested 
+% using EEGLAB versions v2019.1 and v2020.0
 
 % Author: Alejandro Perez
 % version 1: University of Toronto, UTSC, June 7th 2018.
