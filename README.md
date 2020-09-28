@@ -4,8 +4,8 @@ biPersonal_pipeline consists in a set of Matlab functions for the processing of 
 Each of the functions performs a step in the processing of EEG hyperscanning by using EEGLAB functions arranged in neccesary sequential order.
 These functions were tailor-maded for the experiment reported at:
 Pérez et al. (2019) Differential brain-to-brain entrainment while speaking and listening in native and foreign languages. Cortex, 111, 303-315.
-doi: 10.1016/j.cortex.2018.11.026
-But it could be easily adapted to other EEG formats and designs.
+doi: 10.1016/j.cortex.2018.11.026;
+but it could be easily adapted to other EEG formats and designs.
 
 The functions comprised in the biPersonal_Pipeline are:
 
