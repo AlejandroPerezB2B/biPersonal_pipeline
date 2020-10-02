@@ -31,5 +31,5 @@ biPer_cleaning_v2.m
    To be used after function biPer_preproc(). Assumes the existence inside folder (xxx) of two EEG recordings (xxx_A.set and xxx_B.set) .
    These datasets should be decomposed by ICA and with fitted dipoles.
    The following steps are performed over the individual data (same order)
-   1.- estimate symetrically constrained bilateral dipoles
-   2.- detection and rejection of ICs containing ocular movements and other non-neural activity
+   1.- estimating symetrically constrained bilateral dipoles
+   2.- keeping ICs most probably containing neural activity
