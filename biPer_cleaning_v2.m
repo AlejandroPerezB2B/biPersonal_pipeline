@@ -97,7 +97,7 @@ for subj=[1 2] % loop across the dyad
     close all;
     formatSpec = 'Subject %s with %s channels and %s components\n';
     fprintf(formatSpec,EEG.filename,num2str(EEG.nbchan),num2str(size(EEG.icaact,1))); % sanity check
-
+    clear EEG;
 end
 
 end
